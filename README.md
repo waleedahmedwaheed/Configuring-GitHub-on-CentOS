@@ -52,6 +52,13 @@ Ensure the SSH key is loaded into memory by starting the SSH agent:
 eval "$(ssh-agent -s)"
 ```
 
+After generating the key, ensure that the permissions are correctly set
+
+```sh
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+```
+
 Add Your SSH Key to the SSH Agent:
 
 Use the following command to add your private SSH key to the agent:
